@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - link "LeasePilot" [ref=e9] [cursor=pointer]:
+      - /url: /
+      - img [ref=e11]
+      - generic [ref=e14]: LeasePilot
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Welcome back" [level=3] [ref=e17]
+        - paragraph [ref=e18]: Sign in to your account to continue
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - text: Email
+            - textbox "Email" [ref=e22]:
+              - /placeholder: you@example.com
+              - text: user@example.com
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e25]: Password
+              - link "Forgot password?" [ref=e26] [cursor=pointer]:
+                - /url: /forgot-password
+            - generic [ref=e27]:
+              - textbox "••••••••" [ref=e28]: wrongpassword
+              - button [ref=e29] [cursor=pointer]:
+                - img
+          - button "Sign In" [ref=e30] [cursor=pointer]
+        - generic [ref=e31]:
+          - text: Don't have an account?
+          - link "Sign up" [ref=e32] [cursor=pointer]:
+            - /url: /signup
+    - paragraph [ref=e33]:
+      - link "← Back to home" [ref=e34] [cursor=pointer]:
+        - /url: /
+```

@@ -1,0 +1,9 @@
+project_id = "leaseflow"
+
+[functions.credit-check]
+verify_jwt = true
+
+[functions.tenant-payment]
+verify_jwt = true
+
+

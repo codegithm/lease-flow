@@ -1,0 +1,21 @@
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: leaseflow_azurite
+    ports:
+      - "10000:10000"
+      - "10001:10001"
+    command: "azurite-blob --blobHost 0.0.0.0 --blobPort 10000 -l /data"
+    volumes:
+      - azurite_data:/data
+
+  leaseflow-frontend:
+    build:
+      context: .
+    container_name: leaseflow_frontend
+    env_file:
+      - .env
+    ports:
+      - "5173:8080"
+volumes:
+  azurite_data:
